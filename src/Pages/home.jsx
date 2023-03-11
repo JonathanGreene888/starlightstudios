@@ -8,9 +8,9 @@ import {
   MDBCardText,
 } from 'mdb-react-ui-kit';
 import Popover from '@mui/material/Popover';
-import './App.css';
+import './home.css';
 
-function App() {
+function Home() {
   const home = useRef(null);
   const aboutus = useRef(null);
   const end = useRef(null);
@@ -36,7 +36,6 @@ function App() {
   const id = open ? 'simple-popover' : undefined;
 
   return (
-
     <div className="App">
       <section ref={home}>
         <header className="App-header">
@@ -130,8 +129,8 @@ function App() {
           Registered Starlight Studios
         </footer>
       </section>
-    </div >
+    </div>
   );
 }
 
-export default App;
+export default Home;
