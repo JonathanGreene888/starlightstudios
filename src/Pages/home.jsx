@@ -6,12 +6,14 @@ import {
   MDBCardBody,
   MDBCardTitle,
   MDBCardText,
+  MDBCardImage
 } from 'mdb-react-ui-kit';
 import Popover from '@mui/material/Popover';
 import './home.css';
 
 function Home() {
   const home = useRef(null);
+  const peoplebio = useRef(null);
   const aboutus = useRef(null);
   const end = useRef(null);
 
@@ -59,6 +61,9 @@ function Home() {
               <ul>
                 <li onClick={() => scrollToSection(home)}>
                   Home
+                </li>
+                <li onClick={() => scrollToSection(peoplebio)}>
+                  People Bio
                 </li>
                 <li onClick={() => scrollToSection(aboutus)}>
                   About us
@@ -123,13 +128,60 @@ function Home() {
             </MDBCol>
           </MDBRow>
         </section>
+        <section className='people-bio-container' ref={peoplebio}>
+          <MDBRow>
+            <div> <h1> Project Partners </h1></div>
+            <MDBCol sm='4'>
+              <MDBCard>
+                <MDBCardTitle>Mia Thomas</MDBCardTitle>
+                <MDBCardImage width={20} height={200} src='https://assets-global.website-files.com/5a6a34c2920f950001f51775/630fce81781bd3820305a5f3_f36773f6.jpeg' alt='...' position='top' />
+                <MDBCardBody>
+                  <MDBCardText>
+                    Some info about her
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardText>
+                  Specialties: Voice, 3D Animation
+                </MDBCardText>
+              </MDBCard>
+            </MDBCol>
+            <MDBCol sm='4'>
+              <MDBCard>
+                <MDBCardTitle>Jason Staythom</MDBCardTitle>
+                <MDBCardImage width={40} height={200} src='https://resizing.flixster.com/hsUnLWi9kT71UtIIfuIql0-qSHE=/218x280/v2/https://flxt.tmsimg.com/assets/165127_v9_bb.jpg' alt='...' position='top' />
+                <MDBCardBody>
+                  <MDBCardText>
+                    Some info about him
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardText>
+                  Specialties: Ads
+                </MDBCardText>
+              </MDBCard>
+            </MDBCol>
+            <MDBCol sm='4'>
+              <MDBCard>
+                <MDBCardTitle>Gal Gadoh</MDBCardTitle>
+                <MDBCardImage width={20} height={200} src='https://assets-global.website-files.com/5a6a34c2920f950001f51775/630fce81781bd3820305a5f3_f36773f6.jpeg' alt='...' position='top' />
+                <MDBCardBody>
+                  <MDBCardText>
+                    Some info about her
+                  </MDBCardText>
+                </MDBCardBody>
+                <MDBCardText>
+                  Specialties: Music
+                </MDBCardText>
+              </MDBCard>
+            </MDBCol>
+          </MDBRow>
+        </section>
       </body>
       <section ref={end}>
         <footer className='footer'>
           Registered Starlight Studios
         </footer>
       </section>
-    </div>
+    </div >
   );
 }
 

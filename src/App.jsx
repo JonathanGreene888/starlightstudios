@@ -4,6 +4,7 @@ import {
     Route,
 } from "react-router-dom";
 import CustomerProfile from './Pages/customerProfile';
+import EmployeeProfile from './Pages/employeeProfile';
 import Home from './Pages/home';
 
 function App() {
@@ -12,13 +13,33 @@ function App() {
             <Routes>
                 <Route
                     path="/"
-                    element={<Home />} />
+                    element={<Home />}
+                />
                 <Route
-                    exact
-                    path="customerprofile"
-                    element={<CustomerProfile />} />
+                    path="customerprofile/*"
+                    element={<Customers />}
+                />
+                <Route
+                    path="employeeprofile/*"
+                    element={<Employees />}
+                />
             </Routes>
         </BrowserRouter>
     )
 }
 export default App;
+
+const Customers = () => {
+    return (
+        <Routes>
+            <Route path=":id" element={<CustomerProfile />} />
+        </Routes>
+    )
+}
+const Employees = () => {
+    return (
+        <Routes>
+            <Route path=":id" element={<EmployeeProfile />} />
+        </Routes>
+    )
+}
