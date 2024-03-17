@@ -1,0 +1,12 @@
+.Container{
+    border: 1px solid black;
+    height: 30vh;
+    margin-left:  30px; 
+    margin-right: 30px;
+}
+
+.Header-Row{
+    border: 1px solid black;
+    display: flex;
+
+}
